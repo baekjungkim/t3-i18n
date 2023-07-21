@@ -5,9 +5,11 @@ import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 
 import { api } from "~/utils/api";
+import { useSession } from "next-auth/react";
 
 const Home: NextPage = () => {
   const router = useRouter();
+  const { data } = useSession();
   const { t, i18n } = useTranslation();
   const [message, setMessage] = useState({ message: "" });
   const { mutateAsync, isLoading } = api.example.getMessage.useMutation();
@@ -33,6 +35,7 @@ const Home: NextPage = () => {
         {t("common:switch-language")}
       </button>
       <p>{JSON.stringify(message)}</p>
+      <p>{JSON.stringify(data)}</p>
     </div>
   );
 };
