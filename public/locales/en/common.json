@@ -1,0 +1,5 @@
+{
+  "hello-frontend": "Hello from the frontend",
+  "switch-language": "Switch language",
+  "get-message": "Fetch message in English from the backend"
+}

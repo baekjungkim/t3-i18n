@@ -1,0 +1,5 @@
+{
+  "hello-frontend": "안녕, 프론트",
+  "switch-language": "언어 변경",
+  "get-message": "백엔드에서 한글 메시지 조회"
+}
